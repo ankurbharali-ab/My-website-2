@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Personal portfolio of a student entrepreneur, marketer, community builder and professional armwrestler.">
+<title>Kaustov Gogoi | Entrepreneur · Marketer · Armwrestler</title>
+<style>
+:root{
+  --bg:#08090b; --card:#111318; --text:#f5f5f5; --muted:#a7abb4;
+  --line:#252832; --accent:#d8ff45; --max:1180px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+a{color:inherit;text-decoration:none}
+.container{width:min(92%,var(--max));margin:auto}
+nav{position:fixed;top:0;left:0;right:0;z-index:20;background:rgba(8,9,11,.78);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.06)}
+.nav-inner{height:72px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-weight:800;letter-spacing:-.03em}.logo span{color:var(--accent)}
+.navlinks{display:flex;gap:28px;font-size:.9rem;color:var(--muted)}
+.navlinks a:hover{color:var(--text)}
+.hero{min-height:100vh;display:grid;place-items:center;padding:130px 0 70px;position:relative;overflow:hidden}
+.hero:before{content:"";position:absolute;width:600px;height:600px;border-radius:50%;background:var(--accent);opacity:.07;filter:blur(100px);right:-180px;top:80px}
+.hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:70px;align-items:center}
+.eyebrow{color:var(--accent);text-transform:uppercase;letter-spacing:.16em;font-size:.75rem;font-weight:800;margin-bottom:18px}
+h1{font-size:clamp(3.3rem,8vw,7.8rem);line-height:.88;letter-spacing:-.07em;max-width:900px}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.hero-sub{font-size:1.15rem;color:var(--muted);max-width:650px;margin:30px 0}
+.buttons{display:flex;gap:12px;flex-wrap:wrap}
+.btn{padding:13px 20px;border:1px solid var(--line);border-radius:999px;font-weight:700}
+.btn.primary{background:var(--accent);color:#090a0b;border-color:var(--accent)}
+.btn:hover{transform:translateY(-2px)}
+.photo-box{width:min(360px,82vw);aspect-ratio:1/1;border:1px solid #343943;border-radius:50%;background:linear-gradient(145deg,#151820,#0c0d10);display:grid;place-items:center;color:#676c77;position:relative;overflow:hidden;box-shadow:0 0 0 10px rgba(216,255,69,.035),0 25px 70px rgba(0,0,0,.45);justify-self:end}
+.photo-box .plus{font-size:5rem;font-weight:200;color:#30343d}
+section{padding:110px 0}
+.section-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:45px}
+.kicker{color:var(--accent);font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;font-weight:800}
+h2{font-size:clamp(2.3rem,5vw,4.7rem);line-height:.95;letter-spacing:-.05em;margin-top:10px}
+.lead{max-width:600px;color:var(--muted)}
+.about{display:grid;grid-template-columns:.7fr 1.3fr;gap:70px}
+.about p{color:#c4c7cf;font-size:1.05rem;margin-bottom:18px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:28px;min-height:190px;transition:.25s}
+.card:hover{transform:translateY(-5px);border-color:#3a3e49}
+.num{font-size:.75rem;color:var(--accent);font-weight:800}.card h3{font-size:1.35rem;margin:35px 0 8px}.card p{color:var(--muted)}
+.lab{background:#0e1014;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.lab-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.quote{font-size:clamp(2rem,4vw,4rem);line-height:1.05;letter-spacing:-.045em}
+.quote span{color:var(--accent)}
+.mindset{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:24px;overflow:hidden}
+.mind{background:var(--card);padding:40px}.mind h3{font-size:1.7rem;margin-bottom:18px}.mind li{list-style:none;color:var(--muted);padding:9px 0;border-bottom:1px solid var(--line)}
+.contact{padding-bottom:60px}
+.contact-box{background:var(--accent);color:#090a0b;border-radius:30px;padding:55px;display:flex;justify-content:space-between;gap:30px;align-items:end}
+.contact-box h2{max-width:700px}.email{font-weight:800;border-bottom:2px solid #090a0b;padding-bottom:3px;word-break:break-all}
+footer{border-top:1px solid var(--line);padding:28px 0;color:#777b85;font-size:.82rem;display:flex;justify-content:space-between;gap:20px}
+@media(max-width:800px){
+ .navlinks{display:none}.hero-grid,.about,.lab-grid,.mindset{grid-template-columns:1fr}
+ .hero{padding-top:110px}.photo-box{max-width:430px}.grid{grid-template-columns:1fr}
+ .section-head{display:block}.lead{margin-top:20px}.contact-box{display:block;padding:35px}.email{display:inline-block;margin-top:25px}
+ footer{display:block}footer div+div{margin-top:8px}
+}
+</style>
+</head>
+<body>
+<nav><div class="container nav-inner">
+  <div class="logo">KAUSTOV<span>.</span></div>
+  <div class="navlinks">
+    <a href="#about">About</a><a href="#venture">Venture Lab</a><a href="#skills">Focus</a><a href="#athlete">Athlete</a><a href="#contact">Contact</a>
+  </div>
+</div></nav>
+
+<header class="hero">
+<div class="container hero-grid">
+  <div>
+    <div class="eyebrow">Kaustov Gogoi · Entrepreneur · Marketer · Athlete</div>
+    <h1>Learn. Build.<br><em>Compete.</em><br>Improve.</h1>
+    <p class="hero-sub">Student entrepreneur, Co-Founder of The Venture Lab, marketing enthusiast, community builder and professional armwrestler.</p>
+    <div class="buttons"><a class="btn primary" href="#about">Explore Journey ↓</a><a class="btn" href="#contact">Get in Touch</a></div>
+  </div>
+  <div class="photo-box"><div class="plus">K</div></div>
+</div>
+</header>
+
+<section id="about"><div class="container">
+<div class="section-head"><div><div class="kicker">01 — About</div><h2>Building ideas.<br>Building myself.</h2></div>
+<p class="lead">A journey shaped by entrepreneurship, marketing, leadership, community and competitive sport.</p></div>
+<div class="about">
+<div></div>
+<div>
+<p>I’m a student entrepreneur, Co-Founder of The Venture Lab, a marketing enthusiast and a professional armwrestler with a strong interest in entrepreneurship, business, marketing, leadership and personal development.</p>
+<p>I enjoy exploring ideas, experimenting with marketing, building communities and learning through real-world experience. I believe meaningful work requires more than ideas — it requires teamwork, communication, adaptability and execution.</p>
+<p>I’m still at an early stage of my journey, and I see that as an opportunity to learn, experiment, meet ambitious people and continue developing my skills.</p>
+</div>
+</div>
+</div></section>
+
+<section id="venture" class="lab"><div class="container lab-grid">
+<div><div class="kicker">02 — The Venture Lab</div><h2>A community for young builders.</h2></div>
+<div><p class="quote">“Great ideas can come from <span>anyone.</span> The right community helps turn ideas into something real.”</p><br><p class="lead">As a Co-Founder, I’m helping build a student-led community that brings together young founders, creators, innovators and curious minds to connect, exchange ideas, collaborate, learn and explore entrepreneurship.</p></div>
+</div></section>
+
+<section id="skills"><div class="container">
+<div class="section-head"><div><div class="kicker">03 — Areas of Focus</div><h2>What I’m<br>building.</h2></div></div>
+<div class="grid">
+<div class="card"><div class="num">01</div><h3>Marketing</h3><p>Digital marketing, content creation, branding, social strategy, audience growth and business storytelling.</p></div>
+<div class="card"><div class="num">02</div><h3>Entrepreneurship</h3><p>Exploring startup ideas, business models, strategy and the process of turning concepts into action.</p></div>
+<div class="card"><div class="num">03</div><h3>Community</h3><p>Connecting young people, creating opportunities to collaborate and building an environment for ideas to grow.</p></div>
+<div class="card"><div class="num">04</div><h3>Leadership</h3><p>Developing communication, teamwork, problem-solving, adaptability and execution through practical experience.</p></div>
+<div class="card"><div class="num">05</div><h3>Branding</h3><p>Understanding people, communicating ideas clearly and creating memorable connections between brands and audiences.</p></div>
+<div class="card"><div class="num">06</div><h3>Personal Growth</h3><p>Learning continuously, reflecting on results and building skills through challenges and experimentation.</p></div>
+</div></div></section>
+
+<section id="athlete" class="lab"><div class="container">
+<div class="section-head"><div><div class="kicker">04 — The Athlete</div><h2>Strength is<br>a mindset.</h2></div>
+<p class="lead">Professional armwrestling has taught me discipline, consistency, patience, focus, preparation and mental strength.</p></div>
+<div class="mindset">
+<div class="mind"><h3>Armwrestling</h3><ul><li>Discipline</li><li>Preparation</li><li>Consistency</li><li>Patience</li><li>Competitive mindset</li></ul></div>
+<div class="mind"><h3>Entrepreneurship</h3><ul><li>Goal setting</li><li>Execution</li><li>Problem solving</li><li>Adaptability</li><li>Continuous improvement</li></ul></div>
+</div>
+</div></section>
+
+<section><div class="container">
+<div class="section-head"><div><div class="kicker">05 — Vision</div><h2>Still learning.<br>Already building.</h2></div></div>
+<div class="about"><div><p class="lead">My long-term goal is to build strong expertise in marketing, entrepreneurship, business strategy, branding and startup development while continuing to grow as an athlete and leader.</p></div>
+<div><p>Through The Venture Lab, I want to help create an environment where young people feel confident enough to share their ideas, connect with others and start building. I want to gain real-world experience, learn from successful businesses and startups, and keep turning curiosity into action.</p></div></div>
+</div></section>
+
+<section id="contact" class="contact"><div class="container">
+<div class="contact-box"><div><div class="kicker" style="color:#090a0b">06 — Contact</div><h2>Let’s connect,<br>collaborate & build.</h2></div>
+<div>
+<p style="margin-bottom:8px">For collaborations, ideas or conversations:</p>
+<a class="email" href="mailto:kaustovgogoi435@gmail.com">kaustovgogoi435@gmail.com</a>
+<div style="margin-top:18px"><a class="btn" style="border-color:#090a0b;color:#090a0b;display:inline-block" href="https://www.linkedin.com/in/kaustov-gogoi-12085a400/" target="_blank" rel="noopener">LinkedIn ↗</a></div>
+</div></div>
+</div></section>
+
+<footer><div>© 2026 Kaustov Gogoi. All rights reserved.</div><div>Co-Founder — The Venture Lab · Personal Portfolio</div></footer>
+</body>
+</html>
